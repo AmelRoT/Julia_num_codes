@@ -12,23 +12,18 @@
 #    a    x1 ...  x_n   b
 
 
-n = 500
-m = 500
+function doubleIntegralWithEdgePoints(f1,n,m,a,b,c,d)
 
-a = 0 
-b = 2
-
-c = 0 
-d = 2
 
 delta_X = (b-a)/n
 delta_Y = (d-c)/m
-x_f = delta_X:delta_X:b; 
-y_f = delta_Y:delta_Y:d; 
+x_f = a+delta_X:delta_X:b; 
+y_f = c+delta_Y:delta_Y:d; 
 
 
 
-f(x,y) = 16-x^2-2*y^2
+#f(x,y) = 16-x^2-2*y^2
+f = f1; 
 V = 0;  #volume 
 
 for j in 1:length(y_f)
@@ -39,12 +34,16 @@ for j in 1:length(y_f)
     end 
 end 
 
+    display(V); 
+
+end 
 
 
 
+f1(x,y) = (1-x^2)^(1/2)
 
-
-
+#f1(x,y) = 16-x^2-2*y^2
+doubleIntegralWithEdgePoints(f1,500,500,-1,1,-2,2)
 
 
 
