@@ -82,11 +82,55 @@ function doubleIntegralTypeI(f1,n,m,a,b,c,d,y_up, y_do)
 
 end 
 
+
+
 y1(x) = 1+x^2
 y2(x) = 2*x^2
 f1(x,y) = x+2*y
 
 doubleIntegralTypeI(f1,2*10^3,2*10^3,-1,1,0,10,y1,y2)
+
+y1(x) = 4-x^2
+y2(x) = 3x^2
+f1(x,y) = x^2*y
+
+
+doubleIntegralTypeI(f1,2*10^3,2*10^3,0,1,0,10,y1,y2)
+
+y1(x) = 2*x
+y2(x) = x^2
+f1(x,y) = x^2+y^2
+
+
+doubleIntegralTypeI(f1,2*10^3,2*10^3,0,2,0,10,y1,y2)
+
+
+
+y1(x) = 1-(1/2)*x
+y2(x) = x/2
+f1(x,y) = 2-x-2*y
+
+
+doubleIntegralTypeI(f1,2*10^3,2*10^3,0,1,0,10,y1,y2)
+
+
+y1(x) = 1-(1/2)*x
+y2(x) = x/2
+f1(x,y) = 2-x-2*y
+
+
+doubleIntegralTypeI(f1,2*10^3,2*10^3,0,1,0,10,y1,y2)
+
+y1(x) = x^2
+y2(x) = x^3
+f1(x,y) = 2y+x^2
+
+
+doubleIntegralTypeI(f1,2*10^3,2*10^3,0,1,0,1,y1,y2)
+
+
+
+
 
 
 
